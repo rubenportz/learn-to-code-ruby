@@ -91,7 +91,6 @@ To build this app you will need to learn how to:
 
 When you have completed the exercise, read the Learn X in Y for Markdown and YAML.
 
-
 **Listing and reading files**
 
 There are many ways to list and read files.
@@ -111,3 +110,87 @@ See the [documentation](https://kramdown.gettalong.org/documentation.html) for h
 **YAML**
 
 See the standard lib [documetation](https://ruby-doc.org/stdlib-2.7.0/libdoc/yaml/rdoc/YAML.html) for working with YAML.
+
+### 3. shapes
+
+Using only these core Ruby langauge features:
+
+```
+puts, print, gets.chomp.to_i, if, else, else if, unless, for
+```
+
+create a programs that ask for dimensions to draw:
+
+*Horizontal line*
+
+```
+Enter length: 4
+####
+```
+
+*Vertical line*
+
+```
+Enter length: 4
+#
+#
+#
+#
+```
+
+*Filled square*
+
+```
+Enter length: 4
+####
+####
+####
+####
+```
+
+*Outlined square*
+
+```
+Enter length: 4
+####
+#  #
+#  #
+####
+```
+
+*Filled left-leaning triangle*
+
+```
+Enter length: 4
+#
+##
+###
+####
+```
+
+*Outlined left-leaning triangle*
+
+```
+Enter length: 6
+#
+##
+# #
+#  #
+#   #
+######
+```
+
+*Outlined diamond*
+
+```
+Enter odd number: 7
+   #
+  # #
+ #   #
+#     #
+ #   #
+  # #
+   #
+```
+
+Bonus: find out how to, and check, if the number given is odd.
