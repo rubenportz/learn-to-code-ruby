@@ -18,7 +18,7 @@ I've included Markdown and YAML as some of the exercises will use them. YAML is 
 
 ## Exercises
 
-### 1. Adding calculator
+### 1. calculator.rb
 
 Create a simple terminal app that takes in two numbers, sums them and displays the results to the user.
 
