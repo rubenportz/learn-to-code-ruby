@@ -1,0 +1,14 @@
+name: Data
+description: This is a data file with a list of questions
+questions:
+  - name: One
+    content: What is 1 + 1
+    choices: [1, 2, 3]
+    answer: 1
+  - name: Question Two
+    content: What is the capital of the United Kingdom
+    choices:
+      - London
+      - England
+      - New York
+    answer: 1
