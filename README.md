@@ -119,7 +119,9 @@ Using only these core Ruby langauge features:
 puts, print, gets.chomp.to_i, if, else, else if, unless, for
 ```
 
-create a programs that ask for dimensions to draw:
+and no string multiplication ("#" * x) create a programs that ask for dimensions to draw shapes:
+
+*Single for loop*
 
 *Horizontal line*
 
@@ -136,6 +138,42 @@ Enter length: 4
 #
 #
 #
+```
+
+*nested for loops*
+
+Framework:
+
+See [/shapes/example.rb](/shapes/example.rb)
+```
+#   y
+# x (1,1)(2,1)(3,1)
+#   (1,2)(2,2)(3,2)
+#   (1,3)(2,3)(3,3)
+
+# columns
+for y in 1..10 do
+
+  # rows
+  for x in 1..20 do
+    # easier to read tests
+
+    # column number is represented by x value
+    first_col = x == 1
+    last_col= x == 20
+    # row number is represented by y value
+    first_row = y == 1
+
+    if first_row or last_row or first_col or y > 10/2
+      print "#"
+    else
+      print " "
+    end
+  end
+
+  # end of row
+  puts
+end
 ```
 
 *Filled square*
@@ -194,3 +232,54 @@ Enter odd number: 7
 ```
 
 Bonus: find out how to, and check, if the number given is odd.
+
+### 4. grids
+
+In Ruby a list is represented by a square brackets surrounding by comma separted values, for example:
+
+See [/lists/list.rb](/lists/list.rb)
+```
+row = ["X", "_", "_"]
+
+for x in row
+  print x
+end
+
+puts
+```
+
+Because lists can have any value, you can have a list of lists, for example:
+
+See [/lists/grid.rb](/lists/list.rb)
+```
+grid = [
+  ["X", "O", "O"],
+  ["X", "X", "_"],
+  ["O", "_", "X"],
+]
+
+# columns
+# list indexes start at 0
+for y in 0..2 do
+
+  # rows
+  for x in 0..2 do
+    print grid[y][x]
+  end
+
+  # end of row
+  puts
+end
+```
+
+*Naughts and crosses*
+
+Create a naughts and crosses game by extending [/lists/xo.rb](/lists/xo.rb).
+After each player's input the entire board should be re-displayed.
+
+Bonus:
+- Check the player's input is valid, if not ask again
+- Check if the board is full and break
+- Allow players to restart
+- Keep track of the turn number and display it to players, remember both players go on each turn
+- Very hard: Check if there is a no-win scenario and break
